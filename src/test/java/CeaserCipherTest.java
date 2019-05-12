@@ -34,6 +34,15 @@ public class CeaserCipherTest {
         assertEquals("FQI", testCipher.encodeString(testInput, 2));
 
     }
+    @Test
+    public void decryptString_returnsdecryptesStringOfUserInput() {
+        CeaserCipher testCipher = new CeaserCipher();
+        String testInput = "FQI";
+        assertEquals("DOG", testCipher.decryptString(testInput, 2));
+
+
+
+    }
 
 
 
