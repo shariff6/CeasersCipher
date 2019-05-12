@@ -11,6 +11,14 @@ public class CeaserCipher {
 
         char[] userInputArray = userWord.toUpperCase().toCharArray();
 
+        for (int i = 1; outPutArray.size() < userWord.length(); i++) {
+
+            for (char plainLetter : userInputArray
+            ) {
+
+
+            }
+        }
 
     }
 }
