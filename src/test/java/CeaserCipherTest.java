@@ -13,4 +13,22 @@ public class CeaserCipherTest {
         assertEquals(true, testCipher instanceof  CeaserCipher);
     }
 
+    @Test
+    public void encodeString_returnsReplacementOf1stLetterOfUserInputOnKey() {
+        CeaserCipher testCipher = new CeaserCipher();
+        String testInput = "Dog";
+        assertEquals("FQI", testCipher.encodeString(testInput, 27));
+
+    }
+    @Test
+    public void encodeString_returnsEncodedStringOfUserInput() {
+        CeaserCipher testCipher = new CeaserCipher();
+        String testInput = "Dog";
+        assertEquals("FQI", testCipher.encodeString(testInput, 2));
+
+    }
+
+
+
+
 }

@@ -16,9 +16,26 @@ public class CeaserCipher {
             for (char plainLetter : userInputArray
             ) {
 
+                Integer letterPosition = mainAlphabet.indexOf(String.valueOf(plainLetter));
 
+                if (letterPosition + encodingKey > 26) {
+                    newLetterPosition = ((letterPosition + encodingKey) - (i * 26));
+                } else {
+                    newLetterPosition = (letterPosition + encodingKey);
+                }
+
+                String newLetter = String.valueOf(mainAlphabet.get(newLetterPosition));
+                outPutArray.add(newLetter);
+                encodedWord = userWord.replaceAll(String.valueOf(plainLetter), newLetter);
             }
         }
+        StringBuilder builder = new StringBuilder();
+        for ( String letter : outPutArray
+             ) {
+            builder.append(letter);
+        }
+        String str = builder.toString();
+        return str;
 
     }
 }
