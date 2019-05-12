@@ -17,13 +17,20 @@ public class CeaserCipherTest {
     public void encodeString_returnsReplacementOf1stLetterOfUserInputOnKey() {
         CeaserCipher testCipher = new CeaserCipher();
         String testInput = "Dog";
-        assertEquals("FQI", testCipher.encodeString(testInput, 27));
+        assertEquals("FQI", testCipher.encodeString(testInput, 2));
 
     }
     @Test
     public void encodeString_returnsEncodedStringOfUserInput() {
         CeaserCipher testCipher = new CeaserCipher();
         String testInput = "Dog";
+        assertEquals("FQI", testCipher.encodeString(testInput, 2));
+
+    }
+    @Test
+    public void encodeString_returnsEncodedStringRegardlessOfCaseOfUserInput(){
+        CeaserCipher testCipher = new CeaserCipher();
+        String testInput = "DoG";
         assertEquals("FQI", testCipher.encodeString(testInput, 2));
 
     }
