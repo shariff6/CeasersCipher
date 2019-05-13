@@ -34,8 +34,8 @@ public class CeaserCipher {
              ) {
             builder.append(letter);
         }
-        String str = builder.toString();
-        return str;
+        String endodedString = builder.toString();
+        return endodedString;
 
     }
     public String decryptString(String userWord, int encodingKey) {
@@ -67,8 +67,8 @@ public class CeaserCipher {
         ) {
             builder.append(letter);
         }
-        String str = builder.toString();
-        return str;
+        String decodedString = builder.toString();
+        return decodedString;
 
     }
 }
